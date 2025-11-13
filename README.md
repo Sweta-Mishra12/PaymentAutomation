@@ -46,7 +46,7 @@ Step 1: Clone the Repository
 
 Clone this project to your local machine:
 
-git clone [https://github.com/YourUsername/PaymentAutomation.git](https://github.com/YourUsername/PaymentAutomation.git)
+git clone 
 cd PaymentAutomation
 
 
