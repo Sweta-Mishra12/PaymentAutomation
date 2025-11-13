@@ -58,13 +58,9 @@ Step 3: Configure Login Credentials (MANDATORY)
 
 The script will fail if it cannot start the login process. You must provide a valid Flipkart mobile number or email.
 
-Navigate to: Payment page class under pageobject package 
+Navigate to: src/test/resources/testdata/ and update your mobile or email in mobNumber to successfully login. 
 
-Update the mobile number property with your registered mobile number or email in this **enterMobileNumber** method:
-
-# Use your actual Flipkart registered mobile number or email
-LOGIN_USERNAME=your-real-mobile-number-or-email
-
+and also update card details their
 
 Step 4: Run the Test Suite
 
