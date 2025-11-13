@@ -1,6 +1,8 @@
 package com.payment.pageobjects;
 
 import com.payment.base.BaseClass;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,7 @@ import java.time.Duration;
  * Page Object for the Payment Page.
  * Handles selecting a payment method and entering details.
  */
-public class PaymentPage {
+public class PaymentPage extends BaseClass {
     private final WebDriver driver;
     private final WebDriverWait wait;
     
@@ -61,13 +63,13 @@ public class PaymentPage {
      * for manual OTP/Password entry and Login click.
      * @param mobNumber The mobile number to enter.
      */
-    public void enterMobileNumber(String mobNumber) {
-        System.out.println("Entering mobile number: " + mobNumber);
+    public void enterMobileNumber() {
+        String userDetail=prop.getProperty("mobNumber");
         try {
             // Wait for and enter the mobile number/email
             WebElement mobileField = wait.until(ExpectedConditions.visibilityOfElementLocated(mobileNumberInput));
             // Using the passed parameter 'mobNumber' (or email if that's what is expected)
-            mobileField.sendKeys(Your number); 
+            mobileField.sendKeys(userDetail); 
 
             // Click the main Continue button
             WebElement continueBtn = wait.until(ExpectedConditions.elementToBeClickable(ContinueButton));
@@ -154,7 +156,7 @@ public class PaymentPage {
         // --- PRE-PAYMENT STEPS ---
         String dummyMobileNumber = "9999999999"; 
         
-        enterMobileNumber(dummyMobileNumber);
+        enterMobileNumber();
         navigateToPaymentSection();
         // -------------------------
 
