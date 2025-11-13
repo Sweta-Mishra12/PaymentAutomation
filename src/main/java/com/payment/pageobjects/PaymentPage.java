@@ -67,7 +67,7 @@ public class PaymentPage {
             // Wait for and enter the mobile number/email
             WebElement mobileField = wait.until(ExpectedConditions.visibilityOfElementLocated(mobileNumberInput));
             // Using the passed parameter 'mobNumber' (or email if that's what is expected)
-            mobileField.sendKeys("9128258712"); 
+            mobileField.sendKeys(mobNumber); 
 
             // Click the main Continue button
             WebElement continueBtn = wait.until(ExpectedConditions.elementToBeClickable(ContinueButton));
